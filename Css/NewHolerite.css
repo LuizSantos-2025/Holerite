@@ -4,10 +4,27 @@ margin: 0;
 box-sizing: border-box;
 }
 
+.valorLiquido {
+    font-weight: bold;
+    margin-top: 2rem;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+.darkMode .valorLiquido {
+    font-weight: bold;
+     margin-top: 2rem;
+    border: 2px solid black;
+    background-color: purple;
+    color: white;
+
+}
+
 
 #inputt {
-    font-size: 20px;
-background-color: #1b991b;
+font-size: 20px;
+/* background-color: #1b991b; */
+background-color: black;
 color: white;
 /* border: 2px solid blue; */
 border: none;
@@ -16,22 +33,32 @@ padding-left: .25rem;
 border-radius: 6px;
 margin-bottom: 2px;
 }
+.darkMode #inputt {
+    background-color: white;
+    color: black;
+}
 
 fieldset {
-    margin-top: 2rem;
-    font-weight: bold;
-    border: none;
+margin-top: 2rem;
+font-weight: bold;
+border: none;
 }
 input::placeholder {
-    color: white;
+color: white;
+font-weight: bold;
+}
+.darkMode input::placeholder {
+    color: black;
     font-weight: bold;
+
 }
 #sub {
-    font-size: 20px;
+font-size: 20px;
 width: 6rem;
 font-weight: bold;
 border: none;
-background-color: #1b991b;
+/* background-color: #1b991b; */
+background-color:black;
 color: white;
 /* border: 1px solid blue; */
 height: 2rem;
@@ -39,15 +66,45 @@ padding-left: .25rem;
 border-radius: 6px;
 cursor: pointer;
 }
-#sub:hover {
-    background-color: #1b801b;
+
+#sub {
+font-size: 20px;
+width: 6rem;
+font-weight: bold;
+border: none;
+/* background-color: #1b991b; */
+background-color:black;
+color: white;
+/* border: 1px solid blue; */
+height: 2rem;
+padding-left: .25rem;
+border-radius: 6px;
+cursor: pointer;
+}
+.darkMode #sub {
+    background-color: white;
+    color:  black;
+}
+
+.darkMode #sub:hover {
+/* background-color: #1b801b; */
+background-color: rgb(110, 14, 110);
+color: white;
+transition: .5s;
 }
 
 
 #container-icons {
+margin-top: 2rem;
+margin-left: 2rem;
+background-color: black;
+color: white;
 display: flex;
-justify-content: space-around;
+gap: 18rem;
+padding-left: 2rem;
 font-size: 30px;
+width: 450px;
+border-radius: 4px ;
 }
 
 .darkMode{
@@ -63,8 +120,9 @@ color:black;
 transition: 1.5s;
 }
 #container {  
+margin-left: 2rem;
 padding-top: 2.5rem; 
-border: 2px solid blue;
+border: 2px solid black;
 width: 450px;
 height: 25vh;
 box-shadow: 5px 5px 5px 5px black;
@@ -72,28 +130,32 @@ box-shadow: 5px 5px 5px 5px black;
 }
 .darkMode #container {
 padding-top: 2.5rem; 
-border: 2px solid blue;
+border: 2px solid black;
 width: 450px;
 height: 25vh;
 box-shadow: 5px 5px 5px 5px purple;
 
 }
-
-#geral {
-margin-top: 2rem;
+h1 {
+padding-left: 10px;
 }
+/* #geral {
+margin-top: 2rem; 
+}
+*/
 #vazio {
-/* padding-left: 10px; */
+padding-left: 2rem;
 /* border: 2px solid blue; */
 width: 250px;
 height: 30vh;
+
 }
 .firstAliquota {
 /* padding-left: 10px; */
 margin: 1rem auto;
 border: 2.5px solid black;
 box-shadow: 5px 5px 5px 5px black;
-height: 100px;
+height: 150px;
 width: 450px;
 }
 .darkMode .firstAliquota {
@@ -101,7 +163,7 @@ width: 450px;
 margin: 1rem auto;
 border: 2.5px solid white;
 box-shadow: 2.5px 2.5px 2.5px 1.5px white;
-height: 100px;
+height: 150px;
 width: 450px;
 }
 
@@ -119,5 +181,5 @@ display: none;
 
 }
 .inhide {
-    display: block;
+display: block;
 }
