@@ -1,32 +1,33 @@
 
+var day = document.querySelector("#dark");
 
-var btn = document.querySelector(".bi-moon-stars");
 
-btn.addEventListener("click", function(){
-    console.log(btn);
-    document.body.toogle("hide");
+day.addEventListener("click", function() {
+document.body.classList.toggle("darkMode");
+console.log("Night Ativado");
+
+day.classList.add("hide");
+if(("hide")){
+    night.classList.remove("hide");
+}
+
+})
+
+var night = document.querySelector("#light");
+night.addEventListener("click", function(){
+document.body.classList.toggle("darkMode");
+
+
+console.log("Light Ativado");
+night.classList.add("hide");
+if(("hide")){
+    day.classList.remove("hide");
+}
+
 })
 
 
-// Mapeando o icone darkMode
-var dark = document.querySelector("#dark");
 
-
-// criando um evento de click no icone de darkMode
-dark.addEventListener("click", function(){
-
-// ativando a classe darkMode apos o click no icone
-document.body.classList = ("darkMode");
-// console.log("ativado modo Dark");
-
-});
-
-// Mesma descrição acima
-var light = document.querySelector("#light");
-light.addEventListener("click", function(){
-    console.log("teste");
-   document.body.classList = ("lightMode");
-})
 
 // Mapeando o submit do input
 var sub = document.querySelector("#sub");
