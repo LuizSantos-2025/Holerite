@@ -22,7 +22,7 @@ box-sizing: border-box;
 
 
 #inputt {
-font-size: 20px;
+font-size: 17px;
 /* background-color: #1b991b; */
 background-color: black;
 color: white;
@@ -46,6 +46,7 @@ border: none;
 input::placeholder {
 color: white;
 font-weight: bold;
+
 }
 .darkMode input::placeholder {
     color: black;
@@ -53,7 +54,7 @@ font-weight: bold;
 
 }
 #sub {
-font-size: 20px;
+font-size: 17px;
 width: 6rem;
 font-weight: bold;
 border: none;
@@ -65,22 +66,11 @@ height: 2rem;
 padding-left: .25rem;
 border-radius: 6px;
 cursor: pointer;
+}
+#sub:hover {
+    background-color: rgba(0, 0, 0, 0.705);
 }
 
-#sub {
-font-size: 20px;
-width: 6rem;
-font-weight: bold;
-border: none;
-/* background-color: #1b991b; */
-background-color:black;
-color: white;
-/* border: 1px solid blue; */
-height: 2rem;
-padding-left: .25rem;
-border-radius: 6px;
-cursor: pointer;
-}
 .darkMode #sub {
     background-color: white;
     color:  black;
