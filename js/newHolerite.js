@@ -46,6 +46,7 @@ sub.addEventListener("click", function () {
 
 // Mapeando o input e atribuindo o valor digitado no input a variavel salario
 var salario = document.querySelector("#inputt").value;
+var salario2 = "";
 
 // Teste condicional se o salario for menor ou igual a 1518.00
 
@@ -83,9 +84,6 @@ function salarioMinimo(salario){
     if(salario === '' || salario == 0){
     console.log("Insira um valor valido")
 }else{
-    
-
-    // SalarioFamilia();
 
 var arr = [0.075, 0.09, 0.12, 0.14];
 var liquido = salario - (salario*arr[0]);
@@ -97,6 +95,20 @@ var containerVazio = document.querySelector("#vazio");
 
 var criaDiv = document.createElement("div");
 criaDiv.setAttribute("class","firstAliquota");
+
+var createBtn = document.createElement("button");
+createBtn.classList.add("btn");
+createBtn.addEventListener("click", function(){
+    criaDiv.remove();
+})
+
+console.log(createBtn)
+var txNode = document.createTextNode("Remover");
+createBtn.appendChild(txNode);
+criaDiv.appendChild(createBtn);
+
+
+
 
 var criaP  = document.createElement("p");
 var criaP2 = document.createElement("p");
@@ -225,15 +237,42 @@ containerVazio.appendChild(criaDiv);
 body.appendChild(containerVazio);
 }
 
-function SalarioFamilia(salario){ 
+function SalarioFamilia(){
+var Nfilhos = document.querySelector("#Nfilhos");
 
-console.log("Tem direito a salario familia");
+var enviar = document.querySelector("#submit");
+enviar.addEventListener("click", function(){
+
+var Nfilhos = document.querySelector("#Nfilhos").value;
+
+if(Nfilhos < 0){
+    console.log("é menor que zero");
+Nfilhos = 0;
+}
+console.log(Nfilhos +" Filho(s)");
+
+})
+var iconClose = document.querySelector(".bi-x-circle");
+
+iconClose.addEventListener("click", function() {
+
+var valorZero = 0;
+valorZero = Nfilhos.value = "";
+// console.log("o valor: "+valorZero);
+
+// console.log("removeValor");
+
+})
 
 var SalarioFamilia = 65;
 
-
-
 }
+SalarioFamilia();
+
+function Limpar() {
+    console.log("limpar");
+}
+
 
 
 
